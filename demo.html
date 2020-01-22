@@ -87,7 +87,7 @@
             autoComplete accepts settings from an object of key/value pairs, and can be assigned to any text input field.
         </p>
         <pre class="prettyprint"><code>// initialize
-var my_autoComplete = new autoComplete({key1: value1, key2: value2});
+var my_autoComplete = new AutoComplete({key1: value1, key2: value2});
 
 // destroy
 my_autoComplete.destroy();</code></pre>
@@ -149,7 +149,7 @@ my_autoComplete.destroy();</code></pre>
             This plugin was designed mainly with AJAX requests in mind, but it may be used with local data, as well.
             Connecting the autocompletion suggester to an array of strings can be done in the source function like so:
         </p>
-        <pre class="prettyprint"><code>new autoComplete({
+        <pre class="prettyprint"><code>new AutoComplete({
     selector: 'input[name=&quot;q&quot;]',
     minChars: 2,
     source: function(term, suggest){
@@ -172,7 +172,7 @@ my_autoComplete.destroy();</code></pre>
             In order to keep the source code small while retaining full flexibility, we decided to only use a simple callback function as the source for suggestions.
             Make your AJAX call inside this function and return matching suggestions with the response callback. For brevity, this example uses jQuery for AJAX:
         </p>
-        <pre class="prettyprint"><code>new autoComplete({
+        <pre class="prettyprint"><code>new AutoComplete({
     selector: 'input[name=&quot;q&quot;]',
     source: function(term, response){
         $.getJSON('/some/ajax/url/', { q: term }, function(data){ response(data); });
@@ -191,7 +191,7 @@ my_autoComplete.destroy();</code></pre>
             Again using jQuery's AJAX method for brevity:
         </p>
         <pre class="prettyprint"><code>var xhr;
-new autoComplete({
+new AutoComplete({
     selector: 'input[name=&quot;q&quot;]',
     source: function(term, response){
         try { xhr.abort(); } catch(e){}
@@ -214,7 +214,7 @@ new autoComplete({
             While typing country names or language codes, a list of matching suggestions is displayed. E.g. typing "de" will show "Germany" as a suggestion, because "de" is the language code for German.
             Source code for this example:
         </p>
-        <pre class="prettyprint"><code>new autoComplete({
+        <pre class="prettyprint"><code>new AutoComplete({
     selector: 'input[name=&amp;quot;q&amp;quot;]',
     minChars: 1,
     source: function(term, suggest){
@@ -266,7 +266,7 @@ new autoComplete({
     <div id="fb-root"></div>
     <script src="auto-complete.js"></script>
     <script>
-        var demo1 = new autoComplete({
+        var demo1 = new AutoComplete({
             selector: '#hero-demo',
             minChars: 1,
             source: function(term, suggest){
@@ -279,7 +279,7 @@ new autoComplete({
             }
         });
 
-        var demo2 = new autoComplete({
+        var demo2 = new AutoComplete({
             selector: '#advanced-demo',
             minChars: 0,
             source: function(term, suggest){

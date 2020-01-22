@@ -1,0 +1,23 @@
+{
+    "name": "van-autocomplete",
+    "version": "1.1.0",
+    "description": "An extremely lightweight and powerful vanilla JavaScript completion suggester.",
+    "main": "auto-complete.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/renanaragao/JavaScript-autoComplete.git"
+    },
+    "keywords": [
+        "autocomplete",
+        "vanilla"
+    ],
+    "author": "simon@pixabay.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/renanaragao/JavaScript-autoComplete/issues"
+    },
+    "homepage": "https://github.com/renanaragao/JavaScript-autoComplete#readme"
+}
